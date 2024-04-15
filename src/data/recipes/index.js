@@ -1,6 +1,6 @@
 import CincauIce from '../../assets/img/es_cincau_hijau.jpg';
 import VanillaIceCream from '../../assets/img/es_krim_vanila.jpg';
-import Tea from '../../assets/img/es_krim_vanila.jpg';
+import Tea from '../../assets/img/es_teh_manis.jpg';
 import OrangeJuice from '../../assets/img/jus_jeruk.jpg';
 import MangoJuice from '../../assets/img/jus_mangga.jpg';
 import FriedRice from '../../assets/img/nasi_goreng.jpg';
@@ -194,7 +194,7 @@ const recipes = [
   },
   {
     id: 'resep-9',
-    nama: 'Es Krim Vanila',
+    nama: 'Ice Cream Vanila',
     kategori: 'Makanan',
     gambar: VanillaIceCream,
     bahan: [

@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: inter;
+  src: url(../public/Inter-Regular.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  font-family: inter;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
+  padding: 15px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-top: -1px;
+  text-transform: uppercase;
+}
+
+.navbar {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-column {
+  margin: 0 10px;
+  border-radius: 10px;
+  margin: 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid #DAD7D7;
+  background-color: #fff;
+}
+
+.navbar-button:hover {
+  background-color: #ddd;
+}
+
+.navbar-button.selected {
+  background-color: #403D3D;
+  color: #fff;
+}
+
+.navbar-button.selected:hover {
+  background-color: #444;
+}
+
+.recipes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.recipe-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  overflow: hidden;
+  width: 300px;
+  cursor: pointer;
+}
+
+.recipe-image {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.recipe-title {
+  font-size: 1.3rem;
+  margin: 20px;
+  text-align: center;
+}
+
+.recipe-category {
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.modal-image {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.modal-body {
+  max-height: 60vh;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.modal-body h4 {
+  margin-top: 10px;
+}
+
+.modal-body ul {
+  padding-left: 20px;
+}
+
+.modal-body li {
+  margin-bottom: 5px;
+}
+
+.modal-close {
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
 }
